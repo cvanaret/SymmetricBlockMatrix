@@ -5,9 +5,9 @@ template <typename Expression>
 class Inverse {
 public:
     constexpr Inverse(Expression&& expression): expression(std::forward<Expression>(expression)) { }
-    operator int() const {
+    /*operator int() const {
         return 1/this->expression;
-    }
+    }*/
 
 protected:
     const Expression expression;
@@ -81,7 +81,7 @@ public:
         // TODO: invert the (Index, Index) block
         // just using a hard-coded block at the moment
         // What I'm trying to achieve does not work yet
-        constexpr auto inverted_block = invert(1);
+        constexpr auto inverted_block = 1;
 
         //using RemainingBlocks = typename std::tuple_element<0, decltype(this->blocks)>::type;
         //constexpr auto remaining_blocks = std::get<0>(this->blocks);
